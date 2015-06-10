@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			Javascript Assignment
+		</title>
+	</head>
+	<body>
+	<form name="frm1" id="frm1">
+<pre>
+<input type="button" name="checkurl" id="checkurl" value="CHECK URL" onClick="myFunction()"><input disabled="disabled" type="button" id="addlinkvalue" name="addlink" value="ADD LINK" onClick="LinkAdd()"><br />
+<div id="hyperlink">
+<a href="http://www.facebook.com" id="hyperlink1" target="_blank">http://www.facebook.com</a> <br />
+<a href="http://www.gmail.com" id="hyperlink2" target="_blank">http://www.gmail.com</a> <br />
+<a href="http://www.twitter.com" id="hyperlink3" target="_blank">http://www.twitter.com</a> <br />
+<a href="http://www.w3schools.com" id="hyperlink4" target="_blank">http://www.w3schools.com</a> <br />
+<a href="http://www.yahoo.com" id="hyperlink5" target="_blank">http://www.yahoo.com</a> <br />
+</div>
+<p id="demo"></p>
+</pre>
+	</form>	
+	</body>
+	<script language="javascript" type="text/javascript">
+	function myFunction()
+	{
+		if(document.getElementById("hyperlink1").href == 'http://www.pro-tekconsulting.com')
+			document.getElementById("addlinkvalue").disabled = true;
+		else if(document.getElementById("hyperlink2").href == 'http://www.pro-tekconsulting.com')
+			document.getElementById("addlinkvalue").disabled = true;
+		else if(document.getElementById("hyperlink3").href == 'http://www.pro-tekconsulting.com')
+			document.getElementById("addlinkvalue").disabled = true;
+		else if(document.getElementById("hyperlink4").href == 'http://www.pro-tekconsulting.com')
+			document.getElementById("addlinkvalue").disabled = true;
+		else if(document.getElementById("hyperlink5").href == 'http://www.pro-tekconsulting.com')
+			document.getElementById("addlinkvalue").disabled = true;
+		else
+			document.getElementById("addlinkvalue").disabled = false;
+	}
+	function LinkAdd()
+	{
+		txt1 = '<a href="http://www.pro-tekconsulting.com" id="hyperlink6" target="_blank">http://www.pro-tekconsulting.com</a>';
+		var txt = document.getElementById('hyperlink').innerHTML;
+		document.getElementById('hyperlink').innerHTML = txt + txt1;
+	}
+	</script>
+</html>
